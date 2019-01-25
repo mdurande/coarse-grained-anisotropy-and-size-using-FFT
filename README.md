@@ -29,6 +29,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 You will need a version of matlab older than 2015. 
+Images should be either .png or .tiff .tif (stacks are okay)
 
 ### Installing
 
@@ -39,8 +40,31 @@ Once you are there, double click on the script called "main script".
 
 ### How to use it in practice
 
-In this main code, you can set and see the main parameters of the program. The parameters 
+In this main code, you can set and see the main parameters of the program. The parameters that you should change each time are the ones regarding the location of your data on your computer and the location of the output folder you will have. 
 
+```
+Param.name = {'/Users/Melina/Desktop/Nicolas/'};
+
+```
+Param.name should always be written this way. Be careful of the brakets and the slash at the end. It should be the path to your images.
+
+```
+Param.pathin = {'/Users/Melina/Desktop/Nicolas/'};
+
+```
+Param.pathin should always be written this way. Be careful of the brakets and the slash at the end. It should be the path to the folder where you want the program to create the output folder. Here, the output folder will be created at the same location of your images. 
+
+```
+Param.rec = 0.5;                % Overlap between boxes   
+Param.tsart = 10;                % Begining of the analysis
+Param.tleng = 27;                % End of the analysis
+Param.timestep = 2;             % Time step on which to time average
+
+```
+
+These are the only parameters that you NEED to change if you don't know/like coding.In this example, the overlap between the boxes will be of 50%, the first timeframe analysed will be the 10th image, the last one will be the 27 th and the sliding averaged will be of 2, so you will get 16 analysed frames corresponding to the average of frame 1 and 2, 2 and 3 and so on. 
+
+You can then press the run button on the top of your screen.
 
 ### What the parameters are 
 
