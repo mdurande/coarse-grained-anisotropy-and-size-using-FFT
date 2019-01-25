@@ -24,21 +24,33 @@ xyz stacks.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+You will need a version of matlab older than 2015. 
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+To use the code you will need to download the whole repository. Then in matlab, navigate in the "browse folder section" and enter the folder coarse-grained-anisotropy-and-size-using-FFT. This folder contains one main script that you will need to change, and one sub-folder containing all the codes that you will not need to change to make it work. 
 
-Say what the step will be
+Once you are there, double click on the script called "main script".
+
+
+### How to use it in practice
+
+In this main code, you can set and see the main parameters of the program. The parameters 
+
+
+### What the parameters are 
+
+In this main code, you can set and see the main parameters of the program. 
+
+```
+Give the example
+```
+
+
 
 ```
 Give the example
