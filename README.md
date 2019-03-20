@@ -79,7 +79,8 @@ You can then press the run button on the top of your screen.
 
 ### What the parameters are 
 
-In this main code, you can set and see the main parameters of the program. 
+In this main code, you can set and see the main parameters of the program. You do not need to do it if you use the user interface but when you are confortable with the analysis, you might want to bypass the userinterface and write them once and for all.
+Note that if you do not want the user interface, you should just comment the line (by adding '%') in front of the line GUI_deformation_ft(Param) and uncomment (removing the '%') in front of full_analysis(Param)
 
 
 ```
