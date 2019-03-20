@@ -43,16 +43,27 @@ Once you are there, double click on the script called "main script".
 In this main code, you can set and see the main parameters of the program. The parameters that you should change each time are the ones regarding the location of your data on your computer and the location of the output folder you will have. 
 
 ```
-Param.name = {'/Users/Melina/Desktop/Nicolas/'};
+Param.name = {'C:\Users\Melina\Adress to folder1\'};
 
 ```
 Param.name should always be written this way. Be careful of the brakets and the slash at the end. It should be the path to your images.
 
-```
-Param.pathin = {'/Users/Melina/Desktop/Nicolas/'};
+If you have two or more folders of images that you would like to analyze, this is possible if you write it like this: 
 
 ```
-Param.pathin should always be written this way. Be careful of the brakets and the slash at the end. It should be the path to the folder where you want the program to create the output folder. Here, the output folder will be created at the same location of your images. 
+ Param.name = {'C:\Users\Melina\Adress to folder1\';
+      'C:\Users\Melina\Adress to folder2\'};
+
+```
+
+
+```
+Param.pathin = {'C:\Users\Melina\Adress of output folder\'};
+
+```
+Param.pathin should always be written this way. Be careful of the brakets and the slash at the end. It should be the path to the folder where you want the program to create the output folder.
+
+
 
 ```
 Param.rec = 0.5;                % Overlap between boxes   
