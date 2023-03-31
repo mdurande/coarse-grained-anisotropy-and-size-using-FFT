@@ -67,7 +67,7 @@ Param.pathin should always be written this way. Be careful of the brakets and th
 
 ```
 Param.rec = 0.5;                % Overlap between boxes   
-Param.tsart = 10;                % Begining of the analysis
+Param.tstart = 10;                % Begining of the analysis
 Param.tleng = 27;                % End of the analysis
 Param.timestep = 2;             % Time step on which to time average
 
@@ -77,12 +77,12 @@ These are the only parameters that you NEED to change if you don't know/like cod
 
 You can then press the run button on the top of your screen.
 
-### What the parameters are 
+### What  are the parameters
 
 In this main code, you can set and see the main parameters of the program. You do not need to do it if you use the user interface but when you are confortable with the analysis, you might want to bypass the userinterface and write them once and for all.
 Note that if you do not want the user interface, you should just comment the line (by adding '%') in front of the line GUI_deformation_ft(Param) and uncomment (removing the '%') in front of full_analysis(Param)
 
-
+Here are listed the default values, that can be modified using the gui.
 ```
 Param.pas2= 100;                % Size of the subwindows
 Param.cut = 5;                  % Number of pixels to cut around the center of the spectrum so as to visualize better
@@ -94,6 +94,30 @@ Param.nbpoints = 30;            % Nmber of points to keep
 Param.strel = 4;                % Parameter to fill the holes in the thresholded spectrum
 
 ```
+### How results are stored
+
+In your results folder, you will find tiff images, showing the results of the deformation calculation, superimposed or not with the image
+A screenshot of the gui with the finalparameter chosen is also saved. Finally, you will also find two '*.mat' files one is
+'Param.mat', where all the parameters used for the analysis has been saved, and the most important one Results.mat.
+If you load again this file in matlab, you will find a variable Results which is a structure, with the following field:
+- Regl: number of subimages analyzed
+- Posi: X and Y positions of the analyzed regions
+- ci: number of time points
+- numX: number of X positions
+- numY: number of Y positions
+- im_regav stored the information on deformation and size, it is also a structure with fields:
+	- spect: Fourier spectrum if it has been chosen to be store (careful, it may take a lot of space on disk)
+	- M: Inertia matrix in the Fourier Space
+	- S: Deformation calculated from the inertia matrix
+	- angS: Angle of the deformation with the x axis calculated from the inertia matrix
+	- Se: Deformation obtained from the ellipse fit
+	- angSe : angle of the deformation with the xaxis  obtained from the ellipse fit
+	- a: major axis of the ellipse of cell's shape in direct space
+	- b: minor axis of the ellipse of cell's shape in direct space
+
+
+
+
 
 ### If you spot problems, email me please :-) !
   
