@@ -1,5 +1,5 @@
 function affich_result(Param,Results,col)
-
+    
   r=groot;
   sz=r.ScreenSize;
   lw=2;%linewidth of deformation plot
@@ -20,8 +20,8 @@ function affich_result(Param,Results,col)
 
         set(gca,'XTickLabel','','YTickLabel','');
 
-        plot([floor(Param.siz(2)*0.9)-Param.scale,floor(Param.siz(2)*0.9)-1],[Param.siz(1)*0.9,Param.siz(1)*0.9],'linewidth',lw,'color','k');
-        text((floor(Param.siz(2)*0.9)-Param.scale),Param.siz(1)*0.9-30,'100$\%$','color','k');
+        plot([floor(Param.siz(2)*0.9)-Param.scalef/100*Param.scale,floor(Param.siz(2)*0.9)-1],[Param.siz(1)*0.9,Param.siz(1)*0.9],'linewidth',lw,'color','k');
+        text((floor(Param.siz(2)*0.9)-Param.scalef/100*Param.scale),Param.siz(1)*0.9-30,[num2str(Param.scalef),'$\%$'],'color','k');
      %   set(gcf,'color','white');
         axis equal
         axis off
@@ -46,8 +46,8 @@ function affich_result(Param,Results,col)
         quiver(Xdef(:,:,c),Ydef(:,:,c),-(Udef(:,:,c))/2,-(Vdef(:,:,c))/2,0,'color',col,'Autoscale','off','MaxHeadSize',0,'linewidth',lw);
 
         set(gca,'XTickLabel','','YTickLabel','');
-        plot([floor(Param.siz(2)*0.9)-Param.scale,floor(Param.siz(2)*0.9)-1],[Param.siz(1)*0.9,Param.siz(1)*0.9],'linewidth',lw,'color','r');
-        text((floor(Param.siz(2)*0.9)-Param.scale),Param.siz(1)*0.9-30,'100$\%$','color','r');
+        plot([floor(Param.siz(2)*0.9)-Param.scalef/100*Param.scale,floor(Param.siz(2)*0.9)-1],[Param.siz(1)*0.9,Param.siz(1)*0.9],'linewidth',lw,'color','r');
+        text((floor(Param.siz(2)*0.9)-Param.scalef/100*Param.scale),Param.siz(1)*0.9-30,[num2str(Param.scalef),'$\%$'],'color','r');
         set(gcf,'color','white');
         axis equal
         axis off
@@ -73,8 +73,8 @@ function affich_result(Param,Results,col)
 
         set(gca,'XTickLabel','','YTickLabel','');
 
-        plot([floor(Param.siz(2)*0.9)-Param.scale,floor(Param.siz(2)*0.9)-1],[Param.siz(1)*0.9,Param.siz(1)*0.9],'linewidth',lw,'color','k');
-        text((floor(Param.siz(2)*0.9)-Param.scale),Param.siz(1)*0.9-30,'100$\%$','color','k');
+        plot([floor(Param.siz(2)*0.9)-Param.scalef/100*Param.scale,floor(Param.siz(2)*0.9)-1],[Param.siz(1)*0.9,Param.siz(1)*0.9],'linewidth',lw,'color','k');
+        text((floor(Param.siz(2)*0.9)-Param.scalef/100*Param.scale),Param.siz(1)*0.9-30,[num2str(Param.scalef),'$\%$'],'color','k');
      %   set(gcf,'color','white');
         axis equal
         axis off
@@ -99,8 +99,8 @@ function affich_result(Param,Results,col)
         quiver(Xdef(:,:,c),Ydef(:,:,c),-(Udefe(:,:,c))/2,-(Vdefe(:,:,c))/2,0,'color',col,'Autoscale','off','MaxHeadSize',0,'linewidth',lw);
 
         set(gca,'XTickLabel','','YTickLabel','');
-        plot([floor(Param.siz(2)*0.9)-Param.scale,floor(Param.siz(2)*0.9)-1],[Param.siz(1)*0.9,Param.siz(1)*0.9],'linewidth',lw,'color','r');
-        text((floor(Param.siz(2)*0.9)-Param.scale),Param.siz(1)*0.9-30,'100$\%$','color','r');
+        plot([floor(Param.siz(2)*0.9)-Param.scalef/100*Param.scale,floor(Param.siz(2)*0.9)-1],[Param.siz(1)*0.9,Param.siz(1)*0.9],'linewidth',lw,'color','r');
+        text((floor(Param.siz(2)*0.9)-Param.scalef/100*Param.scale),Param.siz(1)*0.9-30,[num2str(Param.scalef),'$\%$'],'color','r');
         set(gcf,'color','white');
         axis equal
         axis off

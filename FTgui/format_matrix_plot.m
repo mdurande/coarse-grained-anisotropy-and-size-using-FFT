@@ -1,7 +1,7 @@
 function [Udef,Vdef,Udefe,Vdefe,Xdef,Ydef,Param] = format_matrix_plot(Param,Results,Row,Col)
 
 
-Param.scale=Param.scale*5;
+Param.scale=Param.scale*Param.sc;
 Ys = unique((Results.Posi(:,2,1)));
 Reg_xy = zeros(numel(Ys),numel(unique((Results.Posi(:,1,1)))));
 

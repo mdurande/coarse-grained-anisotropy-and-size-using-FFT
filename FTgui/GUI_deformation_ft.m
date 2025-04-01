@@ -92,6 +92,13 @@ if handles.Param.regsize
     set(handles.regsize,'Value',1);
     set(handles.adv,'Value',1);
     adv_Callback(handles.adv,[],handles);
+else
+    set(handles.defe1,'Visible','off')
+    set(handles.defe2,'Visible','off')
+    set(handles.defe3,'Visible','off')
+    set(handles.defe1t,'Visible','off')
+    set(handles.defe2t,'Visible','off')
+    set(handles.defe3t,'Visible','off')
 end
 
 

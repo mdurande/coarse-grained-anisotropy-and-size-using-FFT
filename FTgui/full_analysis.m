@@ -4,7 +4,7 @@ function Results = full_analysis(Param)
 
     Anamesi = cleanfolder(Param.name{1});
     Param.siz = size_image(Param.name{1},Anamesi);
-
+    Param.scale=sqrt(2)*Param.pas2/2;
    Results = struct('regl',[],'Posi',[],'im_regav',[],'ci',[],'numX',0,'numY',0);   
 
     % Find the positions we will use
@@ -33,7 +33,7 @@ function Results = full_analysis(Param)
 
       Results = def_analysis(Param,Results);  
    %% Print result
-  
+ 
    affich_result(Param,Results,'g');        % create maps of cell orientations
 
 %     if Param.regsize == 1
